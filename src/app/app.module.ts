@@ -5,7 +5,6 @@ import {Component} from '@angular/core';
 import {Message} from 'primeng/components/common/api';
 import { AppComponent } from './app.component';
 
-
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent ],
