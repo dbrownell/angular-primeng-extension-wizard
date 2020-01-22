@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import {Component} from '@angular/core';
+import {Message} from 'primeng/components/common/api';
 import { AppComponent } from './app.component';
 
 
