@@ -12,6 +12,7 @@
     "@angular/router": "^8.0.0",
     "core-js": "2",
     "primeng": "^8.1.1",
+    "primeng-extensions": "^0.3.0",
     "primeng-extensions-wizard": "^2.2.0",
     "rxjs": "^6.5.2",
     "zone.js": "^0.9.1"
