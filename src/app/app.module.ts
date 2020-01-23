@@ -10,7 +10,7 @@ import {ToastModule} from 'primeng/toast';
 import { MessagesModule } from 'primeng/primeng';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, StepsModule, ToastModule ],
+  imports:      [ BrowserModule, FormsModule, StepsModule, ToastModule, MessagesModule ],
   declarations: [ AppComponent, UserDataWizardComponent ],
   bootstrap:    [ AppComponent ]
 })
