@@ -1,0 +1,10 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+
+<h3 class="first">Basic</h3>
+<p-steps [model]="items"></p-steps>
+
+<h3>Clickable</h3>
+<p-steps [model]="items" [(activeIndex)]="activeIndex" [readonly]="false"></p-steps>
+
+<h3>Custom Style</h3>
+<p-steps [model]="items" styleClass="steps-custom"></p-steps>

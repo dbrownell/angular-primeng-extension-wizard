@@ -6,10 +6,11 @@ import {Message} from 'primeng/components/common/api';
 import { AppComponent } from './app.component';
 import { UserDataWizardComponent } from './user-data-wizard/user-data-wizard.component';
 import {StepsModule} from 'primeng/steps';
+import {ToastModule} from 'primeng/toast';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, StepsModule ],
+  imports:      [ BrowserModule, FormsModule, StepsModule, ToastModule ],
   declarations: [ AppComponent, UserDataWizardComponent ],
   bootstrap:    [ AppComponent ]
 })
