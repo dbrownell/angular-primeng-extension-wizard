@@ -5,6 +5,7 @@ import {MenuItem} from 'primeng/api';
 @Component({
   selector: 'app-user-data-wizard',
   templateUrl: './user-data-wizard.component.html',
+  providers: [ MessageService ],
   styleUrls: ['./user-data-wizard.component.css']
 })
 export class UserDataWizardComponent implements OnInit {
