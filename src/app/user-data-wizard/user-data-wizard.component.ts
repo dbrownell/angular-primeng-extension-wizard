@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Message} from 'primeng/components/common/api';
+import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-user-data-wizard',
@@ -8,26 +9,7 @@ import {Message} from 'primeng/components/common/api';
 })
 export class UserDataWizardComponent implements OnInit {
 
-  constructor() { }
- activeIndex: number = 0;
-    firstName: string;
-    lastName: string;
-    address: string;
- 
-    msgs: Message[] = [];
- 
-    next() {
-        this.activeIndex++;
-    }
- 
-    ok() {
-        this.activeIndex = 0;
-    }
- 
-    onChange(label: string) {
-        this.msgs.length = 0;
-        this.msgs.push({severity: 'info', summary: label});
-    }
+  constructor() { } 
   ngOnInit() {
   }
 

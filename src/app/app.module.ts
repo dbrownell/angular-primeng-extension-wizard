@@ -6,7 +6,7 @@ import {Message} from 'primeng/components/common/api';
 import { AppComponent } from './app.component';
 import { UserDataWizardComponent } from './user-data-wizard/user-data-wizard.component';
 import {StepsModule} from 'primeng/steps';
-import {MenuItem} from 'primeng/api';
+
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, StepsModule ],
