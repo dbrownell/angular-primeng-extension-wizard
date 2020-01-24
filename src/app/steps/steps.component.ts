@@ -4,6 +4,7 @@ import {MessageService} from 'primeng/api';
 @Component({
   selector: 'app-steps',
   templateUrl: './steps.component.html',
+  providers: [MessageService],
   styleUrls: ['./steps.component.css']
 })
 export class StepsComponent implements OnInit {
