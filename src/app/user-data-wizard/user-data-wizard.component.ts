@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ViewEncapsulation } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 import {Message} from 'primeng//api';
 import {MessageService} from 'primeng/api';
@@ -8,8 +7,7 @@ import {MessageService} from 'primeng/api';
   selector: 'app-user-data-wizard',
   templateUrl: './user-data-wizard.component.html',
   providers: [MessageService],
-  styleUrls: ['./user-data-wizard.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./user-data-wizard.component.css']
 })
 export class UserDataWizardComponent implements OnInit {
 
