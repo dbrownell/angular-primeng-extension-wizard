@@ -8,3 +8,23 @@
     <button type="button" pButton (click)="showMultiple()" label="Multiple"></button>
     <button type="button" pButton (click)="clear()" icon="pi pi-times" style="float:right" label="Clear"></button>
 </div>
+
+<h3>Message Service</h3>
+<button type="button" pButton (click)="showViaService()" label="Use Service"></button>
+
+<h3>Inline Message CSS</h3>
+<p>CSS helpers to display inline messages mostly within forms.</p>
+<p-messages severity="info" text="PrimeNG Rocks"></p-messages>
+<p-messages severity="success" text="Record Saved"></p-messages>  
+<p-messages severity="warn" text="Are you sure?"></p-messages>  
+<p-messages severity="error" text="Field is required"></p-messages>
+
+<div style="margin-top:30px">
+    <input type="text" pInputText placeholder="Username" class="ng-dirty ng-invalid">
+    <p-messages severity="error" text="Field is required"></p-messages>
+</div>
+
+<div style="margin-top:30px">
+    <input type="text" pInputText placeholder="Email" class="ng-dirty ng-invalid">
+    <p-messages severity="error"></p-messages>
+</div>
