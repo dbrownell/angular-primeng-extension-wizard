@@ -14,19 +14,49 @@ export class UserDataWizardComponent implements OnInit {
 
     ngOnInit() {
   }
-   constructor(private messageService: MessageService) {}
+  constructor(private messageService: MessageService) {}
 
-        addSingle() {
-            this.messageService.add({severity:'success', summary:'Service Message', detail:'Via MessageService'});
-        }
+  addSingle() {
+      this.messageService.add({severity:'success', summary:'Service Message', detail:'Via MessageService'});
+  }
 
-        addMultiple() {
-            this.messageService.addAll([{severity:'success', summary:'Service Message', detail:'Via MessageService'},
-                            {severity:'info', summary:'Info Message', detail:'Via MessageService'}]);
-        }
+  addMultiple() {
+      this.messageService.addAll([{severity:'success', summary:'Service Message', detail:'Via MessageService'},
+                      {severity:'info', summary:'Info Message', detail:'Via MessageService'}]);
+  }
+   showSuccess() {
+        //this.msgs = [];
+       this.messageService.add({severity:'success', summary:'Success Message', detail:'Order submitted'});
+    }
+
+    showInfo() {       
+        this.messageService.add({severity:'info', summary:'Info Message', detail:'PrimeNG rocks'});
+    }
+
+    showWarn() {
         
-        clear() {
-            this.messageService.clear();
-        }
+        this.messageService.add({severity:'warn', summary:'Warn Message', detail:'There are unsaved changes'});
+    }
+
+    showError() {
+        this.msgs = [];
+        this.msgs.push({severity:'error', summary:'Error Message', detail:'Validation failed'});
+    }
+
+    showMultiple() {
+        
+        this.messageService.addAll([{severity:'info', summary:'Message 1', detail:'PrimeNG rocks'},
+        {severity:'info', summary:'Message 2', detail:'PrimeUI rocks'},
+        {severity:'info', summary:'Message 3', detail:'PrimeFaces rocks'}]);
+    }
+    
+    showViaService() {
+        this.messageService.add({severity:'success', summary:'Service Message', detail:'Via MessageService'});
+    }
+
+      
+  clear() {
+      this.messageService.clear();
+  }
 
 }
