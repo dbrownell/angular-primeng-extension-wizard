@@ -8,9 +8,18 @@ import { UserDataWizardComponent } from './user-data-wizard/user-data-wizard.com
 import {StepsModule} from 'primeng/steps';
 import {ToastModule} from 'primeng/toast';
 import { MessagesModule } from 'primeng/primeng';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, StepsModule, ToastModule, MessagesModule ],
+  imports:      [ 
+  BrowserModule, 
+  ButtonModule,
+  FormsModule,
+  MessagesModule, 
+  StepsModule, 
+  ToastModule,
+   
+  ],
   declarations: [ AppComponent, UserDataWizardComponent ],
   bootstrap:    [ AppComponent ]
 })
