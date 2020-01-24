@@ -15,8 +15,7 @@ export class UserDataWizardComponent implements OnInit {
   }
   constructor(private messageService: MessageService) {}
   
-   showSuccess() {
-        //this.msgs = [];
+   showSuccess() {        
        this.messageService.add({severity:'success', summary:'Success Message', detail:'Order submitted'});
     }
 
