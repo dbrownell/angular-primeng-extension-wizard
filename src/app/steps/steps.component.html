@@ -1,10 +1,20 @@
-<p-toast [style]="{marginTop: '20px'}"></p-toast>
+<p-toast [style]="{marginTop: '400px'}"></p-toast>
 <h3>Wizard Steps</h3>
 <h3 class="first">Basic</h3>
-<p-steps [model]="items" [(activeIndex)]="this.activeIndex" ></p-steps>
+<p-steps [model]="items"></p-steps>
 
 <h3>Clickable</h3>
 <p-steps [model]="items" [(activeIndex)]="this.activeIndex" [readonly]="false"></p-steps>
 
 <h3>Custom Style</h3>
-<p-steps [model]="items" styleClass="steps-custom"></p-steps>
+<pe-steps [(activeIndex)]="activeIndex" (change)="onChange($event)">
+  <pe-step label="First Step">
+    // content of the first step
+  </pe-step> 
+  <pe-step label="Second Step">
+    // content of the second step
+  </pe-step> 
+  <pe-step label="Third Step">
+    // content of the third step
+  </pe-step>
+</pe-steps>

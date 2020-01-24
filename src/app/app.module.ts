@@ -12,6 +12,7 @@ import { MessagesModule } from 'primeng/primeng';
 import {ButtonModule} from 'primeng/button';
 import { StepsComponent } from './steps/steps.component';
 import {MenuItem} from 'primeng/api';
+import { PeStepComponent } from './pe-step/pe-step.component';
 
 @NgModule({
   imports:      [ 
@@ -24,7 +25,7 @@ import {MenuItem} from 'primeng/api';
   ToastModule,
    
   ],
-  declarations: [ AppComponent, UserDataWizardComponent, StepsComponent ],
+  declarations: [ AppComponent, UserDataWizardComponent, StepsComponent, PeStepComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
