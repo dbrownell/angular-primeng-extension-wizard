@@ -14,15 +14,7 @@ export class UserDataWizardComponent implements OnInit {
     ngOnInit() {
   }
   constructor(private messageService: MessageService) {}
-
-  addSingle() {
-      this.messageService.add({severity:'success', summary:'Service Message', detail:'Via MessageService'});
-  }
-
-  addMultiple() {
-      this.messageService.addAll([{severity:'success', summary:'Service Message', detail:'Via MessageService'},
-                      {severity:'info', summary:'Info Message', detail:'Via MessageService'}]);
-  }
+  
    showSuccess() {
         //this.msgs = [];
        this.messageService.add({severity:'success', summary:'Success Message', detail:'Order submitted'});
