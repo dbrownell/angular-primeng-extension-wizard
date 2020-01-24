@@ -10,6 +10,8 @@ import {StepsModule} from 'primeng/steps';
 import {ToastModule} from 'primeng/toast';
 import { MessagesModule } from 'primeng/primeng';
 import {ButtonModule} from 'primeng/button';
+import { StepsComponent } from './steps/steps.component';
+import {MenuItem} from 'primeng/api';
 
 @NgModule({
   imports:      [ 
@@ -22,7 +24,7 @@ import {ButtonModule} from 'primeng/button';
   ToastModule,
    
   ],
-  declarations: [ AppComponent, UserDataWizardComponent ],
+  declarations: [ AppComponent, UserDataWizardComponent, StepsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
