@@ -10,7 +10,7 @@ import {
     Output
 } from '@angular/core';
 import {MenuItem} from 'primeng/components/common/api';
-import {StepComponent} from './pe-step/pe-step.component';
+import {PeStepComponent} from '../pe-step/pe-step.component';
 
 @Component({
   selector: 'app-pe-steps',
@@ -24,11 +24,11 @@ export class PeStepsComponent implements AfterContentInit, OnChanges {
   @Output() activeIndexChange: EventEmitter<any> = new EventEmitter();
   @Output() change = new EventEmitter();
   items: MenuItem[] = [];
-  @ContentChildren(StepComponent) steps: QueryList<StepComponent>;
+  @ContentChildren(PeStepComponent) steps: QueryList<PeStepComponent>;
   constructor() { }
 
  ngAfterContentInit() {
-        this.steps.toArray().forEach((step: StepComponent, index: number) => {
+        this.steps.toArray().forEach((step: PeStepComponent, index: number) => {
             if (!step.styleClass) {
                 // set style class if it was not set on step component directly
                 step.styleClass = this.stepClass;
@@ -43,7 +43,7 @@ export class PeStepsComponent implements AfterContentInit, OnChanges {
                 label: step.label,
                 command: (event: any) => {
                     // hide all steps
-                    this.steps.toArray().forEach((s: StepComponent) => s.active = false);
+                    this.steps.toArray().forEach((s: PeStepComponent) => s.active = false);
 
                     // show the step the user has clicked on.
                     step.active = true;
@@ -67,7 +67,7 @@ export class PeStepsComponent implements AfterContentInit, OnChanges {
         for (let prop in changes) {
             if (prop === 'activeIndex') {
                 let curIndex = changes[prop].currentValue;
-                this.steps.toArray().forEach((step: StepComponent, index: number) => {
+                this.steps.toArray().forEach((step: PeStepComponent, index: number) => {
                     // show / hide the step
                     let selected = index === curIndex;
                     step.active = selected;
