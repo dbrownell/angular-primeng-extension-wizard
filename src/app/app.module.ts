@@ -12,7 +12,7 @@ import { MessagesModule } from 'primeng/primeng';
 import {ButtonModule} from 'primeng/button';
 import { StepsComponent } from './steps/steps.component';
 import {MenuItem} from 'primeng/api';
-// import { PeStepComponent } from './pe-step/pe-step.component';
+import { PeStepComponent } from './pe-step/pe-step.component';
 import { PeStepsComponent } from './pe-steps/pe-steps.component';
 
 @NgModule({
@@ -30,7 +30,7 @@ import { PeStepsComponent } from './pe-steps/pe-steps.component';
     AppComponent, 
     UserDataWizardComponent, 
     StepsComponent, 
-   // PeStepComponent, 
+    PeStepComponent, 
     PeStepsComponent 
     ],
   bootstrap:    [ AppComponent ]
