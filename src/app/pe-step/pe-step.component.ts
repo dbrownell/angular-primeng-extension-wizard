@@ -5,13 +5,9 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './pe-step.component.html',
   styleUrls: ['./pe-step.component.css']
 })
-export class PeStepComponent implements OnInit {
+export class PeStepComponent {
   @Input() styleClass: string;
   @Input() label: string;
   active: boolean = false;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  constructor() { } 
 }
