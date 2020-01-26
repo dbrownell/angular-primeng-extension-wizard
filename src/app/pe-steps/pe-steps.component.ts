@@ -24,7 +24,7 @@ export class PeStepsComponent implements AfterContentInit, OnChanges {
   @Output() activeIndexChange: EventEmitter<any> = new EventEmitter();
   @Output() change = new EventEmitter();
   items: MenuItem[] = []; 
-  public data: Object[];
+  // public data: Object[];
   @ContentChildren(PeStepComponent) steps: QueryList<PeStepComponent>;
   constructor() { }
 
