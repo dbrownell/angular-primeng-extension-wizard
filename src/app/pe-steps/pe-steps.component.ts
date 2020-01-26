@@ -110,7 +110,4 @@ export class PeStepsComponent implements AfterContentInit, OnChanges {
             }
         });
     }
-  ngOnInit() {
-  }
-
 }
