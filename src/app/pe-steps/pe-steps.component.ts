@@ -10,7 +10,7 @@ import {
     Output
 } from '@angular/core';
 import {MenuItem} from 'primeng/components/common/api';
-import {PeStepComponent} from '../pe-step/pe-step.component';
+import { PeStepComponent } from '../pe-step/pe-step.component';
 
 @Component({
   selector: 'app-pe-steps',
