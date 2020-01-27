@@ -14,17 +14,19 @@ import { StepsComponent } from './steps/steps.component';
 import {MenuItem} from 'primeng/api';
 import { PeStepComponent } from './pe-step/pe-step.component';
 import { PeStepsComponent } from './pe-steps/pe-steps.component';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   imports:      [ 
   BrowserAnimationsModule,
   BrowserModule, 
-  ButtonModule,
+  CommonModule, 
+  ButtonModule, 
+  StepsModule,
   FormsModule,
   MessagesModule, 
   StepsModule, 
-  ToastModule,
-   
+  ToastModule
   ],
   declarations: [ 
     AppComponent, 
@@ -33,6 +35,7 @@ import { PeStepsComponent } from './pe-steps/pe-steps.component';
     PeStepComponent, 
     PeStepsComponent 
     ],
+  exports: [PeStepComponent, PeStepsComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
