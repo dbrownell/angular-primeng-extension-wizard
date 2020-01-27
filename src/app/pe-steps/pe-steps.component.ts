@@ -26,8 +26,7 @@ export class PeStepsComponent implements AfterContentInit, OnChanges {
   items: MenuItem[] = [];
 
   @ContentChildren(PeStepComponent) steps: QueryList<PeStepComponent>;
-  constructor() { 
-    this.model = [];
+  constructor() {    
   }
 
  ngAfterContentInit() {
