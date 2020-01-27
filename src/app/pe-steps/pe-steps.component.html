@@ -1,4 +1,5 @@
-<app-pe-steps [ngModel]="items" [(activeIndex)]="activeIndex" [class]="styleClass"></app-pe-steps> 
+<p-steps [model]="items" [(activeIndex)]="activeIndex" [class]="styleClass" [readonly]="false">
+  </p-steps> 
 <ng-content></ng-content>
 <button pButton type="text" *ngIf="activeIndex > 0"
   (click)="previous()" icon="fa-hand-o-left" label="Previous">
