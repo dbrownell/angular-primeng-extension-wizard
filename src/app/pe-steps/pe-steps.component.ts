@@ -30,7 +30,7 @@ export class PeStepsComponent implements AfterContentInit, OnChanges {
   }
 
  ngAfterContentInit() {
-        this.steps.toArray().forEach((step: PeStepComponent, index: number = 0) => {
+        this.steps.toArray().forEach((step: PeStepComponent, index: number) => {
             if (!step.styleClass) {
                 // set style class if it was not set on step component directly
                 step.styleClass = this.stepClass;
