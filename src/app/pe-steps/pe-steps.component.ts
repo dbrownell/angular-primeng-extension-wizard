@@ -12,10 +12,12 @@ import {
 } from '@angular/core';
 import {MenuItem} from 'primeng/components/common/api';
 import { PeStepComponent } from '../pe-step/pe-step.component';
+import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-pe-steps',
   templateUrl: './pe-steps.component.html',
+  providers: [MessageService],
   styleUrls: ['./pe-steps.component.css']
 })
 export class PeStepsComponent implements AfterContentInit, OnChanges, OnInit {
@@ -27,42 +29,39 @@ export class PeStepsComponent implements AfterContentInit, OnChanges, OnInit {
   items: MenuItem[] = [];
 
   @ContentChildren(PeStepComponent) steps: QueryList<PeStepComponent>;
-  constructor() {   
+  constructor(private messageService: MessageService) {   
    
   }
   ngOnInit(){
-     this.items = [
-  {
-    label: 'HOME & FURNITURE', icon: 'fa-home',
-    items: [
-    [
-      {
-        label: 'Home Furnishing',
-        items: [{label: 'Cushions'}, {label: 'Throws'}, 
-        {label: 'Rugs & Doormats'},
-               {label: 'Curtains'}]
-      },
-     {
-       label: 'Home Accessories',
-       items: [{label: 'Artificial Flowers'}, {label: 'Lighting'}, 
-               {label: 'Storage'}, {label: 'Photo Frames'}]
-     }
-   ],
-   [
-     {
-       label: 'Cooking & Dinner',
-       items: [{label: 'Cookware'}, {label: 'Dinnerware'}, 
-       {label: 'Bakerware'}]
-     },
-     {
-       label: 'Bed & Bath',
-       items: [{label: 'Towels'}, {label: 'Bath Mats'}]
-     }
-   ]
-   ]
-  },
-  // more items...
-];
+     this.items = [{
+                label: 'Personal',
+                command: (event: any) => {
+                    this.activeIndex = 0;
+                    this.messageService.add({severity:'info', summary:'First Step', detail: event.item.label});
+                }
+            },
+            {
+                label: 'Seat',
+                command: (event: any) => {
+                    this.activeIndex = 1;
+                    this.messageService.add({severity:'info', summary:'Seat Selection', detail: event.item.label});
+                }
+            },
+            {
+                label: 'Payment',
+                command: (event: any) => {
+                    this.activeIndex = 2;
+                    this.messageService.add({severity:'info', summary:'Pay with CC', detail: event.item.label});
+                }
+            },
+            {
+                label: 'Confirmation',
+                command: (event: any) => {
+                    this.activeIndex = 3;
+                    this.messageService.add({severity:'info', summary:'Last Step', detail: event.item.label});
+                }
+            }
+        ];
   }
 
  ngAfterContentInit() {
