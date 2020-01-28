@@ -1,10 +1,11 @@
+<p-toast [style]="{marginTop: '400px'}"></p-toast>
 <p-steps [model]="items" [(activeIndex)]="activeIndex" [class]="styleClass" [readonly]="false">
   </p-steps> 
 <ng-content></ng-content>
 <button pButton type="text" *ngIf="activeIndex > 0"
-  (click)="previous()" icon="fa-hand-o-left" label="Previous">
-</button>
+  (click)="previous()" icon="pi pi-arrow-circle-left" label="Previous">
+</button> &nbsp;
 <button pButton type="text" *ngIf="activeIndex < items.length - 1"
-  (click)="next()" icon="fa-hand-o-right" 
+  (click)="next()" icon="pi pi-arrow-circle-right" 
     iconPos="right" label="Next">
 </button>
