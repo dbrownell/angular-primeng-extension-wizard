@@ -1,5 +1,6 @@
 import {
     Component,
+    OnInit,
     ContentChildren,
     QueryList,
     AfterContentInit,
@@ -17,7 +18,7 @@ import { PeStepComponent } from '../pe-step/pe-step.component';
   templateUrl: './pe-steps.component.html',
   styleUrls: ['./pe-steps.component.css']
 })
-export class PeStepsComponent implements AfterContentInit, OnChanges {
+export class PeStepsComponent implements AfterContentInit, OnChanges, OnInit {
   @Input() activeIndex: number = 0;
   @Input() styleClass: string;
   @Input() stepClass: string;
@@ -26,7 +27,42 @@ export class PeStepsComponent implements AfterContentInit, OnChanges {
   items: MenuItem[] = [];
 
   @ContentChildren(PeStepComponent) steps: QueryList<PeStepComponent>;
-  constructor() {    
+  constructor() {   
+   
+  }
+  ngOnInit(){
+     this.items = [
+  {
+    label: 'HOME & FURNITURE', icon: 'fa-home',
+    items: [
+    [
+      {
+        label: 'Home Furnishing',
+        items: [{label: 'Cushions'}, {label: 'Throws'}, 
+        {label: 'Rugs & Doormats'},
+               {label: 'Curtains'}]
+      },
+     {
+       label: 'Home Accessories',
+       items: [{label: 'Artificial Flowers'}, {label: 'Lighting'}, 
+               {label: 'Storage'}, {label: 'Photo Frames'}]
+     }
+   ],
+   [
+     {
+       label: 'Cooking & Dinner',
+       items: [{label: 'Cookware'}, {label: 'Dinnerware'}, 
+       {label: 'Bakerware'}]
+     },
+     {
+       label: 'Bed & Bath',
+       items: [{label: 'Towels'}, {label: 'Bath Mats'}]
+     }
+   ]
+   ]
+  },
+  // more items...
+];
   }
 
  ngAfterContentInit() {
